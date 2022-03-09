@@ -1,20 +1,20 @@
-import { appContainer, devModeRun } from './common';
-
-export const moduleLoader: IModuleLoader = (id, component, ReactDom) => {
+export const moduleLoader = ({ id, component, dom, appContainer }: IModuleInfo) => {
   // devModeRun(id);
-  window.mfModule[id] = {
-    mount: () => {
-      ReactDom.render(
-        component,
-        document.querySelector(appContainer),
-      );
-    },
-    unmount: () => {
-      try{
-        ReactDom.unmountComponentAtNode(document.querySelector(appContainer));
-      }
-      catch(error){
-        console.log('unmount error')
+  if (!window.mfModule[id]) {
+    window.mfModule[id] = {
+      mount: () => {
+        dom.render(
+          component,
+          document.querySelector(appContainer as string),
+        );
+      },
+      unmount: () => {
+        try {
+          dom.unmountComponentAtNode(document.querySelector(appContainer as string));
+        }
+        catch (error) {
+          console.log('unmount error')
+        }
       }
     }
   }

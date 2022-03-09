@@ -8,6 +8,12 @@ interface IMfModule {
   mount: Function;
   unmount: Function;
 }
-interface IModuleLoader {
-  (id: string, component: any, dom?: any): void;
+
+interface IModuleInfo {
+  id: string;
+  instance?: any;
+  component?: any;
+  uif: 'react' | 'vue' | 'vue3' | 'react18';
+  appContainer?: string;
+  dom?: any;
 }

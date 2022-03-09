@@ -10,4 +10,10 @@ const Setting = () => {
   );
 }
 
-moduleLoader('setting', <Setting />, ReactDOM);
+moduleLoader({
+  id: 'setting',
+  uif: 'react',
+  component: <Setting />,
+  // appContainer: '#container',
+  dom: ReactDOM,
+});

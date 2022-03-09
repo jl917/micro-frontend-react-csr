@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-const useClearHead = (nodeBucket: Set<any>) => {
+const useClearHeadEffect = (nodeBucket: Set<HTMLElement>) => {
   useEffect(() => () => {
-    const targetNode = document.head as HTMLHeadElement;
+    const targetNode: HTMLHeadElement = document.head;
     nodeBucket.forEach((e): void => {
       try {
-        targetNode.removeChild(e as HTMLElement);
+        targetNode.removeChild(e);
       } catch (error) {
         console.log('노드가 존재하지 않습니다.');
       }
@@ -14,4 +14,4 @@ const useClearHead = (nodeBucket: Set<any>) => {
   });
 };
 
-export default useClearHead;
+export default useClearHeadEffect;

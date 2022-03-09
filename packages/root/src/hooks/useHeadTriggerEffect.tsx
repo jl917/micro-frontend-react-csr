@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useHeadTrigger = (nodeBucket: Set<any>) => {
+const useHeadTriggerEffect = (nodeBucket: Set<HTMLElement>) => {
   useEffect(() => {
     // head 요소 모니터링
     const targetTypes: string[] = ['LINK', 'STYLE', 'SCRIPT'];
@@ -19,4 +19,4 @@ const useHeadTrigger = (nodeBucket: Set<any>) => {
   }, [nodeBucket]);
 };
 
-export default useHeadTrigger;
+export default useHeadTriggerEffect;

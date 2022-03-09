@@ -10,4 +10,10 @@ const About = () => {
   );
 }
 
-moduleLoader('about', <About />, ReactDOM);
+moduleLoader({
+  id: 'about',
+  uif: 'react',
+  component: <About />,
+  // appContainer: '#container',
+  dom: ReactDOM,
+});
