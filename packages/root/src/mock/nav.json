@@ -1,0 +1,16 @@
+{
+  "menus": [
+    {
+      "id": "setting",
+      "name": "Setting",
+      "path": "/setting",
+      "entry": "http://localhost:8001/dist.js"
+    },
+    {
+      "id": "about",
+      "name": "About",
+      "path": "/about",
+      "entry": "http://localhost:8002/dist.js"
+    }
+  ]
+}
