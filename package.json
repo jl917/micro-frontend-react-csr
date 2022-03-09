@@ -1,0 +1,44 @@
+{
+  "name": "micro-fornt-end-react-csr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "npx lerna run start",
+    "dev": "npx lerna run dev",
+    "build:dev": "npx lerna run build:dev",
+    "build:qa": "npx lerna run build:qa",
+    "build:stg": "npx lerna run build:stg",
+    "build": "npx lerna run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jl917/micro-frontend-react-csr.git"
+  },
+  "keywords": [],
+  "author": "julong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jl917/micro-frontend-react-csr/issues"
+  },
+  "homepage": "https://github.com/jl917/micro-frontend-react-csr#readme",
+  "type": "commonjs",
+  "module": "./es/index.js",
+  "exports": {
+    "import": "./es/index.js",
+    "require": "./lib/index.js"
+  },
+  "files": [
+    "dist",
+    "./tscofnig.json"
+  ],
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "lerna": "^4.0.0",
+    "semantic-release": "18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "root",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "julong <julong1988@naver.com>",
+  "homepage": "https://github.com/jl917/micro-frontend-react-csr/tree/main/packages/root#readme",
+  "license": "MIT",
+  "main": "lib/root.js",
+  "directories": {
+    "lib": "lib",
+    "test:qa": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jl917/micro-frontend-react-csr.git"
+  },
+  "scripts": {
+    "test:qa": "echo \"Error: run tests from root\""
+  },
+  "bugs": {
+    "url": "https://github.com/jl917/micro-frontend-react-csr/issues"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
